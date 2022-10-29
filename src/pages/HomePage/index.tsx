@@ -144,8 +144,6 @@ const HomePage: React.FC = () => {
   let premios: any;
 
   useEffect(() => {
-    // You need to restrict it at some point
-    // This is just dummy code and should be replaced by actual
     const fetchPremios = async () => {
       try {
         if (!db) return;
