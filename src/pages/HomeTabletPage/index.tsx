@@ -40,6 +40,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const db = getFirestore(app);
 
+console.log(db);
 // import { initializeApp } from "firebase/app";
 
 // import {
@@ -63,9 +64,9 @@ const db = getFirestore(app);
 
 const ContentWrapper = styled.div`
   // margin-top: 0px;
-  margin-left: 494px;
-  width: 736px;
-  // height: 50vh;
+  margin-left: 27vw;
+  width: 770px;
+  height: 71vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,15 +76,15 @@ const ContentWrapper = styled.div`
 
 const Button = styled.div`
   position: absolute;
-  margin-top: 650px;
-  margin-left: 1050px;
+  margin-top: 55vh;
+  margin-left: 58vw;
   border: 0px solid #08be27;
   border-radius: 70px;
   width: 135px;
   height: 135px;
 `;
 
-const RouletteHeight = 297;
+const RouletteHeight = 311;
 const itemHeight = 160;
 
 let items: IRouletteItem[] = [
@@ -114,7 +115,7 @@ let items: IRouletteItem[] = [
   { id: 16, title: "", subtitle: "", image: rosato },
 ];
 
-const HomePage: React.FC = () => {
+const HomeTabletPage: React.FC = () => {
   let navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
@@ -129,7 +130,7 @@ const HomePage: React.FC = () => {
     Math.floor(Math.random() * (9000 - 3000)) + 3000
   );
 
-  let cantidadPremios = 0;
+  let cantidadPremios = 3;
 
   const [random, setRandom] = useState<number>(
     Math.floor(Math.random() * cantidadPremios)
@@ -193,6 +194,8 @@ const HomePage: React.FC = () => {
             if (premiosElement > 0) {
               console.log("entrePrimero222");
 
+              console.log("adasdasd", premiosAux);
+
               await premiosAux.push({
                 id: element.uid,
                 title: "",
@@ -209,11 +212,9 @@ const HomePage: React.FC = () => {
           console.log(cantidadPremios);
 
           items = [...premiosAux, ...items];
-          console.log(items);
 
           if (cantidadPremios !== 0) {
             if (docSnap.data().number === -1) {
-              console.log("hola");
               setRandom(Math.floor(Math.random() * cantidadPremios));
               setRandom2(Math.floor(Math.random() * cantidadPremios));
               setRandom3(Math.floor(Math.random() * cantidadPremios));
@@ -320,19 +321,20 @@ const HomePage: React.FC = () => {
   }, []);
 
   function playAgain() {
-    navigate("/");
+    navigate("/tablet");
     window.location.reload();
   }
 
-  const play = ref(database, "game/play");
-  onValue(play, (snapshot) => {
-    const data = snapshot.val();
-    if (data) {
-      set(ref(database, "game/play"), false);
-      playAgain();
-    }
-    console.log(data);
-  });
+  // const play = ref(database, "game/play");
+
+  // onValue(play, (snapshot) => {
+  //   const data = snapshot.val();
+  //   if (data) {
+  //     set(ref(database, "game/play"), false);
+  //     playAgain();
+  //   }
+  //   console.log(data);
+  // });
 
   if (loading) {
     return <div className="home-body"></div>;
@@ -348,7 +350,9 @@ const HomePage: React.FC = () => {
     if (random === random2 && random === random3) {
       setTimeout(() => {
         const item: any = items[random];
+        console.log(item);
         const cityRef = doc(db, "premios", item.id);
+        console.log(cityRef);
 
         // // // console.log(premios);
 
@@ -401,7 +405,7 @@ const HomePage: React.FC = () => {
           setDoc(cityRef, { premios: aux4000 }, { merge: true });
         }
 
-        navigate(`/win?${premioSelect.imgFondo}`);
+        // navigate(`/win?${premioSelect.imgFondo}`);
       }, mayorNumber + 2500);
     } else {
       setTimeout(() => {
@@ -410,12 +414,13 @@ const HomePage: React.FC = () => {
         // console.log(item);
         // const cityRef = doc(this.db, "premios", item.uid);
         // setDoc(cityRef, { cantidad: item.cantidad - 1 }, { merge: true });
-        if (!window.location.search.includes("?back")) navigate(`/loss`);
+        // if (!window.location.search.includes("?back")) navigate(`/loss`);
       }, mayorNumber + 2500);
     }
     console.log(random);
     console.log(random2);
     console.log(random3);
+
     return (
       <div className="home-body">
         <ContentWrapper>
@@ -454,4 +459,4 @@ const HomePage: React.FC = () => {
   }
 };
 
-export default HomePage;
+export default HomeTabletPage;

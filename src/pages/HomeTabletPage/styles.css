@@ -1,0 +1,7 @@
+.home-body {
+  background-image: url("../../assets/fondo-amaranta.png");
+  background-repeat: no-repeat;
+  /* width: 100vw; */
+  height: 100vh;
+  /* background-size: 100% auto; */
+}
