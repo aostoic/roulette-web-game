@@ -64,8 +64,8 @@ console.log(db);
 
 const ContentWrapper = styled.div`
   // margin-top: 0px;
-  margin-left: 19.78vw;
-  width: 512px;
+  margin-left: 19.79vw;
+  width: 513px;
   height: 55.7vh;
   display: flex;
   justify-content: center;
