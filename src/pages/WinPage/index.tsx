@@ -8,7 +8,7 @@ const WinPage: React.FC = () => {
   console.log(navigate);
   setTimeout(() => {
     // // // console.log(premios);
-    navigate("/tablet?back");
+    // navigate("/tablet?back");
   }, 10000);
 
   const urlImg = window.location.search.replace("?", "");
@@ -17,6 +17,7 @@ const WinPage: React.FC = () => {
     background-image: url("${urlImg}");
     background-repeat: no-repeat;
     height: 100vh;
+    background-size: 100% auto;
   `;
 
   return <DivMaster></DivMaster>;

@@ -65,8 +65,8 @@ console.log(db);
 const ContentWrapper = styled.div`
   // margin-top: 0px;
   margin-left: 19.92vw;
-  width: 862px;
-  height: 82vh;
+  width: 534px;
+  height: 51vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,16 +76,16 @@ const ContentWrapper = styled.div`
 
 const Button = styled.div`
   position: absolute;
-  margin-top: 57vh;
-  margin-left: 64vw;
+  margin-top: 74vh;
+  margin-left: 63vw;
   border: 0px solid #08be27;
   border-radius: 70px;
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
 `;
 
-const RouletteHeight = 348;
-const itemHeight = 160;
+const RouletteHeight = 216;
+const itemHeight = 110;
 
 let items: IRouletteItem[] = [
   // { id: 0, title: "", subtitle: "", image: sparkling },
