@@ -8,7 +8,7 @@ const WinPage: React.FC = () => {
   console.log(navigate);
   setTimeout(() => {
     // // // console.log(premios);
-    // navigate("/tablet?back");
+    navigate("/tablet?back");
   }, 10000);
 
   const urlImg = window.location.search.replace("?", "");
