@@ -11,7 +11,8 @@ const LossPage: React.FC = () => {
     // console.log(item);
     // const cityRef = doc(this.db, "premios", item.uid);
     // setDoc(cityRef, { cantidad: item.cantidad - 1 }, { merge: true });
-    navigate("/?back");
+    // navigate("/?back");
+    navigate("/tablet?back");
   }, 4000);
   return (
     <div className="home-body-loss">

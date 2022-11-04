@@ -64,9 +64,9 @@ console.log(db);
 
 const ContentWrapper = styled.div`
   // margin-top: 0px;
-  margin-left: 27vw;
-  width: 770px;
-  height: 71vh;
+  margin-left: 19.92vw;
+  width: 862px;
+  height: 82vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@ const Button = styled.div`
   height: 135px;
 `;
 
-const RouletteHeight = 311;
+const RouletteHeight = 348;
 const itemHeight = 160;
 
 let items: IRouletteItem[] = [
@@ -405,7 +405,7 @@ const HomeTabletPage: React.FC = () => {
           setDoc(cityRef, { premios: aux4000 }, { merge: true });
         }
 
-        // navigate(`/win?${premioSelect.imgFondo}`);
+        navigate(`/win?${premioSelect.imgFondo}`);
       }, mayorNumber + 2500);
     } else {
       setTimeout(() => {
@@ -414,7 +414,7 @@ const HomeTabletPage: React.FC = () => {
         // console.log(item);
         // const cityRef = doc(this.db, "premios", item.uid);
         // setDoc(cityRef, { cantidad: item.cantidad - 1 }, { merge: true });
-        // if (!window.location.search.includes("?back")) navigate(`/loss`);
+        if (!window.location.search.includes("?back")) navigate(`/loss`);
       }, mayorNumber + 2500);
     }
     console.log(random);

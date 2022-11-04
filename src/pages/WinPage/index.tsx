@@ -5,10 +5,10 @@ import "./styles.css";
 
 const WinPage: React.FC = () => {
   let navigate = useNavigate();
-
+  console.log(navigate);
   setTimeout(() => {
     // // // console.log(premios);
-    navigate("/?back");
+    navigate("/tablet?back");
   }, 10000);
 
   const urlImg = window.location.search.replace("?", "");
