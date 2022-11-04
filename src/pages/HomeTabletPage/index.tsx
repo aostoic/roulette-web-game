@@ -64,9 +64,9 @@ console.log(db);
 
 const ContentWrapper = styled.div`
   // margin-top: 0px;
-  margin-left: 19.92vw;
-  width: 510px;
-  height: 56vh;
+  margin-left: 19.78vw;
+  width: 512px;
+  height: 55.7vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +76,8 @@ const ContentWrapper = styled.div`
 
 const Button = styled.div`
   position: absolute;
-  margin-top: 74vh;
-  margin-left: 63vw;
+  margin-top: 89vh;
+  margin-left: 64vw;
   border: 0px solid #08be27;
   border-radius: 70px;
   width: 100px;

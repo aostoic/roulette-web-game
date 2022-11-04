@@ -48,7 +48,7 @@ const scale = () => keyframes`
 export const RouletteContentContainer = styled.div<RouletteAnimatable>`
   position: absolute;
   width: 100%;
-  margin-top: -24px;
+  margin-top: -28px;
   top: ${(props) => props.from}px;
   animation: ${scale} ${(props) => props.duration}ms;
   animation-fill-mode: forwards;
