@@ -65,7 +65,7 @@ console.log(db);
 const ContentWrapper = styled.div`
   // margin-top: 0px;
   margin-left: 19.92vw;
-  width: 534px;
+  width: 510px;
   height: 56vh;
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ const Button = styled.div`
   height: 100px;
 `;
 
-const RouletteHeight = 215;
+const RouletteHeight = 205;
 const itemHeight = 110;
 
 let items: IRouletteItem[] = [
