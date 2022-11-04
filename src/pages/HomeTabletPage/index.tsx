@@ -76,12 +76,12 @@ const ContentWrapper = styled.div`
 
 const Button = styled.div`
   position: absolute;
-  margin-top: 55vh;
-  margin-left: 58vw;
+  margin-top: 57vh;
+  margin-left: 64vw;
   border: 0px solid #08be27;
   border-radius: 70px;
-  width: 135px;
-  height: 135px;
+  width: 160px;
+  height: 160px;
 `;
 
 const RouletteHeight = 348;
