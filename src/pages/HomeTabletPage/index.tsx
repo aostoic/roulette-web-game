@@ -40,7 +40,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const db = getFirestore(app);
 
-console.log(db);
+// console.log(db);
 // import { initializeApp } from "firebase/app";
 
 // import {
@@ -153,7 +153,7 @@ const HomeTabletPage: React.FC = () => {
         const premiosSnapshot = await getDocs(premiosCol);
         // eslint-disable-next-line react-hooks/exhaustive-deps
         premios = premiosSnapshot.docs.map((doc) => doc.data());
-        console.log(premios);
+        // console.log(premios);
 
         // const participantsc = collection(db, "participants");
         // const participants = await getDocs(participantsc);
@@ -177,7 +177,7 @@ const HomeTabletPage: React.FC = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          console.log("Document data:", docSnap.data());
+          // console.log("Document data:", docSnap.data());
 
           const premiosAux: any = [];
 
@@ -192,9 +192,9 @@ const HomeTabletPage: React.FC = () => {
               }
             });
             if (premiosElement > 0) {
-              console.log("entrePrimero222");
+              // console.log("entrePrimero222");
 
-              console.log("adasdasd", premiosAux);
+              // console.log("adasdasd", premiosAux);
 
               await premiosAux.push({
                 id: element.uid,
@@ -209,7 +209,7 @@ const HomeTabletPage: React.FC = () => {
 
           // eslint-disable-next-line react-hooks/exhaustive-deps
           cantidadPremios = premiosAux.length;
-          console.log(cantidadPremios);
+          // console.log(cantidadPremios);
 
           items = [...premiosAux, ...items];
 
@@ -350,13 +350,13 @@ const HomeTabletPage: React.FC = () => {
     if (random === random2 && random === random3) {
       setTimeout(() => {
         const item: any = items[random];
-        console.log(item);
+        // console.log(item);
         const cityRef = doc(db, "premios", item.id);
-        console.log(cityRef);
+        // console.log(cityRef);
 
         // // // console.log(premios);
 
-        console.log(item);
+        // console.log(item);
 
         let itemPremios = item.premios;
         let itemRealPremios = item.realPremios;
@@ -417,9 +417,9 @@ const HomeTabletPage: React.FC = () => {
         if (!window.location.search.includes("?back")) navigate(`/loss`);
       }, mayorNumber + 2500);
     }
-    console.log(random);
-    console.log(random2);
-    console.log(random3);
+    // console.log(random);
+    // console.log(random2);
+    // console.log(random3);
 
     return (
       <div className="home-body">

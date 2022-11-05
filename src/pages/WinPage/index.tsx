@@ -5,14 +5,12 @@ import "./styles.css";
 
 const WinPage: React.FC = () => {
   let navigate = useNavigate();
-  console.log(navigate);
+  const urlImg = window.location.search.replace("?", "");
   setTimeout(() => {
     // // // console.log(premios);
     navigate("/tablet?back");
   }, 10000);
 
-  const urlImg = window.location.search.replace("?", "");
-  console.log(urlImg);
   const DivMaster = styled.div`
     background-image: url("${urlImg}");
     background-repeat: no-repeat;
