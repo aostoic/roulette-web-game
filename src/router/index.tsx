@@ -11,7 +11,7 @@ const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomeTabletPage />} />
         <Route path="/tablet" element={<HomeTabletPage />} />
         <Route path="/win" element={<WinPage />} />
         <Route path="/loss" element={<LossPage />} />
