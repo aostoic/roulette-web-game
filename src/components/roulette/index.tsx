@@ -11,7 +11,7 @@ import {
 type Wrapper = Pickable & WithHeight;
 
 export const RouletteWrapper = styled.div<Wrapper>`
-  width: 300px;
+  width: 502px;
   height: ${(props) => props.height}px;
   margin: 490px 10px 0px 0px;
   position: relative;
@@ -48,7 +48,7 @@ const scale = () => keyframes`
 export const RouletteContentContainer = styled.div<RouletteAnimatable>`
   position: absolute;
   width: 100%;
-  margin-top: -28px;
+  margin-top: -120px;
   top: ${(props) => props.from}px;
   animation: ${scale} ${(props) => props.duration}ms;
   animation-fill-mode: forwards;

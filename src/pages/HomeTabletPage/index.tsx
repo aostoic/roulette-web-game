@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import rosato from "../../assets/premios/rosato.png";
 import sparkling from "../../assets/premios/sparkling.png";
 import spritz from "../../assets/premios/spritz.png";
+import uno from "../../assets/premios/1.png";
+import dos from "../../assets/premios/2.png";
+import tres from "../../assets/premios/3.png";
 
 import Roulette from "../../components/roulette";
 
@@ -85,7 +88,7 @@ const Button = styled.div`
 `;
 
 const RouletteHeight = 205;
-const itemHeight = 110;
+const itemHeight = 170;
 
 let items: IRouletteItem[] = [
   // { id: 0, title: "", subtitle: "", image: sparkling },
@@ -94,25 +97,41 @@ let items: IRouletteItem[] = [
   // { id: 3, title: "", subtitle: "", image: toalla },
   //{ id: 4, title: "", subtitle: "", image: tottus },
   // { id: 5, title: "", subtitle: "", image: rosato },
-  { id: 6, title: "", subtitle: "", image: rosato },
-  { id: 7, title: "", subtitle: "", image: sparkling },
-  { id: 8, title: "", subtitle: "", image: spritz },
-  { id: 11, title: "", subtitle: "", image: rosato },
-  { id: 12, title: "", subtitle: "", image: sparkling },
-  { id: 13, title: "", subtitle: "", image: spritz },
-  { id: 16, title: "", subtitle: "", image: rosato },
-  { id: 12, title: "", subtitle: "", image: sparkling },
-  { id: 13, title: "", subtitle: "", image: spritz },
-  { id: 16, title: "", subtitle: "", image: rosato },
-  { id: 12, title: "", subtitle: "", image: sparkling },
-  { id: 13, title: "", subtitle: "", image: spritz },
-  { id: 16, title: "", subtitle: "", image: rosato },
-  { id: 12, title: "", subtitle: "", image: sparkling },
-  { id: 13, title: "", subtitle: "", image: spritz },
-  { id: 16, title: "", subtitle: "", image: rosato },
-  { id: 12, title: "", subtitle: "", image: sparkling },
-  { id: 13, title: "", subtitle: "", image: spritz },
-  { id: 16, title: "", subtitle: "", image: rosato },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 7, title: "", subtitle: "", image: tres },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 6, title: "", subtitle: "", image: tres },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 6, title: "", subtitle: "", image: tres },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 6, title: "", subtitle: "", image: tres },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 7, title: "", subtitle: "", image: tres },
+  { id: 6, title: "", subtitle: "", image: uno },
+  { id: 7, title: "", subtitle: "", image: dos },
+  { id: 7, title: "", subtitle: "", image: tres },
+  // { id: 8, title: "", subtitle: "", image: spritz },
+  // { id: 11, title: "", subtitle: "", image: rosato },
+  // { id: 12, title: "", subtitle: "", image: sparkling },
+  // { id: 13, title: "", subtitle: "", image: spritz },
+  // { id: 16, title: "", subtitle: "", image: rosato },
+  // { id: 12, title: "", subtitle: "", image: sparkling },
+  // { id: 13, title: "", subtitle: "", image: spritz },
+  // { id: 16, title: "", subtitle: "", image: rosato },
+  // { id: 12, title: "", subtitle: "", image: sparkling },
+  // { id: 13, title: "", subtitle: "", image: spritz },
+  // { id: 16, title: "", subtitle: "", image: rosato },
+  // { id: 12, title: "", subtitle: "", image: sparkling },
+  // { id: 13, title: "", subtitle: "", image: spritz },
+  // { id: 16, title: "", subtitle: "", image: rosato },
+  // { id: 12, title: "", subtitle: "", image: sparkling },
+  // { id: 13, title: "", subtitle: "", image: spritz },
+  // { id: 16, title: "", subtitle: "", image: rosato },
 ];
 
 const HomeTabletPage: React.FC = () => {
@@ -211,86 +230,132 @@ const HomeTabletPage: React.FC = () => {
           cantidadPremios = premiosAux.length;
           // console.log(cantidadPremios);
 
-          items = [...premiosAux, ...items];
+          items = [
+            { id: 7, title: "", subtitle: "", image: tres },
+            ...premiosAux,
+            ...items,
+          ];
 
           if (cantidadPremios !== 0) {
             if (docSnap.data().number === -1) {
-              setRandom(Math.floor(Math.random() * cantidadPremios));
-              setRandom2(Math.floor(Math.random() * cantidadPremios));
-              setRandom3(Math.floor(Math.random() * cantidadPremios));
+              const randomNumber = Math.floor(Math.random() * 10);
+
+              if (randomNumber === 1 || randomNumber === 2) {
+                if (premiosAux.length === 2) {
+                  setRandom(randomNumber);
+                } else {
+                  setRandom(1);
+                }
+              } else {
+                setRandom(0);
+              }
+              // setRandom(Math.floor(Math.random() * cantidadPremios));
+              // setRandom2(Math.floor(Math.random() * cantidadPremios));
+              // setRandom3(Math.floor(Math.random() * cantidadPremios));
             }
             if (docSnap.data().number === 0) {
-              setRandom(Math.floor(Math.random() * (2 - 0)) + 0);
-              setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
-              setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
+              // setRandom(Math.floor(Math.random() * (2 - 0)) + 0);
+              // setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
+              // setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
+              setRandom(0);
             }
 
             if (docSnap.data().number === 30) {
-              let numberWin = Math.floor(Math.random() * cantidadPremios);
+              const randomNumber = Math.floor(Math.random() * 6);
+              console.log(randomNumber);
+              if (randomNumber === 1 || randomNumber === 2) {
+                if (premiosAux.length === 2) {
+                  setRandom(randomNumber);
+                } else {
+                  setRandom(1);
+                }
+              } else {
+                setRandom(0);
+              }
+              // let numberWin = Math.floor(Math.random() * cantidadPremios);
 
-              const maxNumber =
-                numberWin === cantidadPremios ? numberWin + 1 : numberWin + 2;
-              const minNumber = numberWin === 0 ? numberWin : numberWin - 1;
+              // const maxNumber =
+              //   numberWin === cantidadPremios ? numberWin + 1 : numberWin + 2;
+              // const minNumber = numberWin === 0 ? numberWin : numberWin - 1;
 
-              setRandom(numberWin);
-              setRandom2(
-                Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber
-              );
-              setRandom3(
-                Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber
-              );
+              // setRandom(numberWin);
+              // setRandom2(
+              //   Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber
+              // );
+              // setRandom3(
+              //   Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber
+              // );
             }
 
             if (docSnap.data().number === 50) {
-              let Numberrandom = Math.floor(Math.random() * 3);
-              let numberWin = Math.floor(Math.random() * cantidadPremios);
+              const randomNumber = Math.floor(Math.random() * 4);
+              console.log(randomNumber);
+              if (randomNumber === 1 || randomNumber === 2) {
+                if (premiosAux.length === 2) {
+                  setRandom(randomNumber);
+                } else {
+                  setRandom(1);
+                }
+              } else {
+                setRandom(0);
+              }
+              // let Numberrandom = Math.floor(Math.random() * 3);
+              // let numberWin = Math.floor(Math.random() * cantidadPremios);
 
-              if (Numberrandom === 0) {
-                setRandom(numberWin);
-                setRandom2(numberWin);
-                setRandom3(Math.floor(Math.random() * cantidadPremios));
-              }
-              if (Numberrandom === 1) {
-                setRandom(numberWin);
-                setRandom2(Math.floor(Math.random() * cantidadPremios));
-                setRandom3(numberWin);
-              }
-              if (Numberrandom === 2) {
-                setRandom(Math.floor(Math.random() * cantidadPremios));
-                setRandom2(numberWin);
-                setRandom3(numberWin);
-              }
+              // if (Numberrandom === 0) {
+              //   setRandom(numberWin);
+              //   setRandom2(numberWin);
+              //   setRandom3(Math.floor(Math.random() * cantidadPremios));
+              // }
+              // if (Numberrandom === 1) {
+              //   setRandom(numberWin);
+              //   setRandom2(Math.floor(Math.random() * cantidadPremios));
+              //   setRandom3(numberWin);
+              // }
+              // if (Numberrandom === 2) {
+              //   setRandom(Math.floor(Math.random() * cantidadPremios));
+              //   setRandom2(numberWin);
+              //   setRandom3(numberWin);
+              // }
             }
 
             if (docSnap.data().number === 100) {
               let numberWin = Math.floor(Math.random() * cantidadPremios);
 
-              setRandom(numberWin);
-              setRandom2(numberWin);
-              setRandom3(numberWin);
+              if (premiosAux.length === 2) {
+                setRandom(numberWin + 1);
+              } else {
+                setRandom(1);
+              }
+
+              // setRandom(numberWin);
+              // setRandom2(numberWin);
+              // setRandom3(numberWin);
             }
           } else {
-            let Numberrandom = Math.floor(Math.random() * 4);
-            if (Numberrandom === 0) {
-              setRandom(Math.floor(Math.random() * (2 - 0)) + 0);
-              setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
-              setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
-            }
-            if (Numberrandom === 1) {
-              setRandom2(Math.floor(Math.random() * (2 - 0)) + 0);
-              setRandom(Math.floor(Math.random() * (4 - 2)) + 2);
-              setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
-            }
-            if (Numberrandom === 2) {
-              setRandom2(Math.floor(Math.random() * (2 - 0)) + 0);
-              setRandom3(Math.floor(Math.random() * (4 - 2)) + 2);
-              setRandom(Math.floor(Math.random() * (6 - 4)) + 4);
-            }
-            if (Numberrandom === 3) {
-              setRandom3(Math.floor(Math.random() * (2 - 0)) + 0);
-              setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
-              setRandom(Math.floor(Math.random() * (6 - 4)) + 4);
-            }
+            setRandom(0);
+
+            // let Numberrandom = Math.floor(Math.random() * 4);
+            // if (Numberrandom === 0) {
+            //   setRandom(Math.floor(Math.random() * (2 - 0)) + 0);
+            //   setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
+            //   setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
+            // }
+            // if (Numberrandom === 1) {
+            //   setRandom2(Math.floor(Math.random() * (2 - 0)) + 0);
+            //   setRandom(Math.floor(Math.random() * (4 - 2)) + 2);
+            //   setRandom3(Math.floor(Math.random() * (6 - 4)) + 4);
+            // }
+            // if (Numberrandom === 2) {
+            //   setRandom2(Math.floor(Math.random() * (2 - 0)) + 0);
+            //   setRandom3(Math.floor(Math.random() * (4 - 2)) + 2);
+            //   setRandom(Math.floor(Math.random() * (6 - 4)) + 4);
+            // }
+            // if (Numberrandom === 3) {
+            //   setRandom3(Math.floor(Math.random() * (2 - 0)) + 0);
+            //   setRandom2(Math.floor(Math.random() * (4 - 2)) + 2);
+            //   setRandom(Math.floor(Math.random() * (6 - 4)) + 4);
+            // }
           }
 
           setLoading(false);
@@ -311,7 +376,7 @@ const HomeTabletPage: React.FC = () => {
       setrandomAnimation(0);
       setrandomAnimation2(0);
       setrandomAnimation3(0);
-      setRandom(1);
+      setRandom(0);
       setRandom2(2);
       setRandom3(3);
       setLoading(false);
@@ -347,10 +412,13 @@ const HomeTabletPage: React.FC = () => {
         : randomAnimation2 > randomAnimation3
         ? randomAnimation2
         : randomAnimation3;
-    if (random === random2 && random === random3) {
+    // if (random === random2 && random === random3) {
+    if (random === 1 || random === 2) {
       setTimeout(() => {
+        console.log(items);
+        console.log(random);
         const item: any = items[random];
-        // console.log(item);
+        console.log(item);
         const cityRef = doc(db, "premios", item.id);
         // console.log(cityRef);
 
@@ -433,7 +501,7 @@ const HomeTabletPage: React.FC = () => {
             canPick={false}
             animationDuration={randomAnimation}
           />
-          <Roulette
+          {/* <Roulette
             data={items}
             prize={items[random2]}
             itemHeight={itemHeight}
@@ -450,7 +518,7 @@ const HomeTabletPage: React.FC = () => {
             picked={false}
             canPick={false}
             animationDuration={randomAnimation3}
-          />
+          /> */}
 
           <Button onClick={playAgain}></Button>
         </ContentWrapper>
