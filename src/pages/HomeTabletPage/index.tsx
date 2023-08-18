@@ -186,7 +186,7 @@ const HomeTabletPage: React.FC = () => {
           // console.log(cantidadPremios);
 
           items = [
-            { id: 7, title: "", subtitle: "", image: tres },
+            { id: 7, title: "", subtitle: "", image: uno },
             ...premiosAux,
             ...items,
           ];
@@ -292,6 +292,7 @@ const HomeTabletPage: React.FC = () => {
             }
 
             if (docSnap.data().number === 100) {
+              console.log(cantidadPremios);
               let numberWin = Math.floor(Math.random() * cantidadPremios);
               console.log("numberWin", numberWin);
               // if (premiosAux.length === 3) {
@@ -348,7 +349,7 @@ const HomeTabletPage: React.FC = () => {
         ? randomAnimation2
         : randomAnimation3;
     // if (random === random2 && random === random3) {
-    if (random === 1 || random === 2) {
+    if (random === 1 || random === 2 || random === 3) {
       setTimeout(() => {
         console.log(items);
         console.log(random);
