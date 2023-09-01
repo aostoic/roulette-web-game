@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import uno from "../../assets/premios/pantalla-siga-participando-ruleta.png";
 import dos from "../../assets/premios/pantalla-vino-01.png";
 import tres from "../../assets/premios/pantalla-vino-02.png";
-import cuatro from "../../assets/premios/pantalla-vino-03.png";
+import cuatro from "../../assets/premios/vino-04.png";
 
 import Roulette from "../../components/roulette";
 
