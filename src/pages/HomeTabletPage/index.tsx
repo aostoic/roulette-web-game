@@ -2,10 +2,10 @@ import React, { useEffect, useReducer, useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
-import uno from "../../assets/premios/pantalla-siga-participando-ruleta.png";
-import dos from "../../assets/premios/pantalla-vino-01.png";
-import tres from "../../assets/premios/pantalla-vino-02.png";
-import cuatro from "../../assets/premios/vino-4.png";
+import uno from "../../assets/26092023/sigaparticipando.png";
+import dos from "../../assets/26092023/premio2.png";
+import tres from "../../assets/26092023/premio3.png";
+import cuatro from "../../assets/26092023/premio4.png";
 
 import Roulette from "../../components/roulette";
 
