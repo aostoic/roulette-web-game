@@ -16,7 +16,7 @@ export const RouletteWrapper = styled.div<Wrapper>`
   margin: 490px 10px 0px 0px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
+  // background: linear-gradient(
     rgb(142 142 142) 11.98%,
     rgb(14 14 14 / 0%) 31.25%,
     rgb(23 23 23 / 0%) 49.48%,
