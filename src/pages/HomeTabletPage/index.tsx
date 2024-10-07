@@ -2,9 +2,12 @@ import React, { useEffect, useReducer, useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
-import uno from "../../assets/14112023/SIGA-PARTICIPANDO.png";
-import dos from "../../assets/14112023/GORRO.png";
-import tres from "../../assets/14112023/GIFT-CARD.png";
+import uno from "../../assets/SIGAPARTICIPANDO.png";
+import dos from "../../assets/DESCORCHADOR.png";
+import tres from "../../assets/LANYARD.png";
+import cuatro from "../../assets/SETDECOPAS.png";
+import cinco from "../../assets/TAPON.png";
+import seis from "../../assets/TAPON.png";
 
 import Roulette from "../../components/roulette";
 
@@ -13,6 +16,7 @@ import styled from "styled-components";
 import { IRouletteItem } from "../../models";
 
 import { initializeApp } from "firebase/app";
+
 import { getDatabase, ref, onValue, child, get, set } from "firebase/database";
 
 import {
@@ -69,18 +73,23 @@ let items: IRouletteItem[] = [
   { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
+  { id: 9, title: "", subtitle: "", image: cuatro },
+  { id: 10, title: "", subtitle: "", image: cinco },
+  { id: 11, title: "", subtitle: "", image: seis },
+
   { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
+  { id: 9, title: "", subtitle: "", image: cuatro },
+  { id: 10, title: "", subtitle: "", image: cinco },
+  { id: 11, title: "", subtitle: "", image: seis },
+
   { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
-  { id: 6, title: "", subtitle: "", image: uno },
-  { id: 7, title: "", subtitle: "", image: dos },
-  { id: 8, title: "", subtitle: "", image: tres },
-  { id: 6, title: "", subtitle: "", image: uno },
-  { id: 7, title: "", subtitle: "", image: dos },
-  { id: 8, title: "", subtitle: "", image: tres },
+  { id: 9, title: "", subtitle: "", image: cuatro },
+  { id: 10, title: "", subtitle: "", image: cinco },
+  { id: 11, title: "", subtitle: "", image: seis },
 ];
 
 const HomeTabletPage: React.FC = () => {
@@ -121,7 +130,7 @@ const HomeTabletPage: React.FC = () => {
         const premiosSnapshot = await getDocs(premiosCol);
         // eslint-disable-next-line react-hooks/exhaustive-deps
         premios = premiosSnapshot.docs.map((doc) => doc.data());
-        // console.log(premios);
+        console.log(premios);
 
         // const participantsc = collection(db, "participants");
         // const participants = await getDocs(participantsc);
@@ -145,7 +154,7 @@ const HomeTabletPage: React.FC = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          // console.log("Document data:", docSnap.data());
+          console.log("Document data:", docSnap.data());
 
           const premiosAux: any = [];
 
