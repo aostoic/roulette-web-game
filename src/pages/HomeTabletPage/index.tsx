@@ -70,21 +70,18 @@ const RouletteHeight = 205;
 const itemHeight = 170;
 
 let items: IRouletteItem[] = [
-  { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
   { id: 9, title: "", subtitle: "", image: cuatro },
   { id: 10, title: "", subtitle: "", image: cinco },
   { id: 11, title: "", subtitle: "", image: seis },
 
-  { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
   { id: 9, title: "", subtitle: "", image: cuatro },
   { id: 10, title: "", subtitle: "", image: cinco },
   { id: 11, title: "", subtitle: "", image: seis },
 
-  { id: 6, title: "", subtitle: "", image: uno },
   { id: 7, title: "", subtitle: "", image: dos },
   { id: 8, title: "", subtitle: "", image: tres },
   { id: 9, title: "", subtitle: "", image: cuatro },
@@ -200,25 +197,51 @@ const HomeTabletPage: React.FC = () => {
 
               if (
                 randomNumber === 1 ||
-                randomNumber === 2
-                // ||
-                // randomNumber === 3
+                randomNumber === 2 ||
+                randomNumber === 3 ||
+                randomNumber === 4 ||
+                randomNumber === 5
               ) {
-                if (premiosAux.length === 3) {
+                if (premiosAux.length === 5) {
                   setRandom(randomNumber);
                 } else {
-                  if (premiosAux.length === 2) {
-                    if (randomNumber === 1 || randomNumber === 2) {
+                  if (premiosAux.length === 4) {
+                    if (
+                      randomNumber === 1 ||
+                      randomNumber === 2 ||
+                      randomNumber === 3 ||
+                      randomNumber === 4
+                    ) {
                       setRandom(randomNumber);
                     } else {
                       setRandom(0);
                     }
                   } else {
-                    if (premiosAux.length === 1) {
-                      if (randomNumber === 1) {
+                    if (premiosAux.length === 3) {
+                      if (
+                        randomNumber === 1 ||
+                        randomNumber === 2 ||
+                        randomNumber === 3
+                      ) {
                         setRandom(randomNumber);
                       } else {
                         setRandom(0);
+                      }
+                    } else {
+                      if (premiosAux.length === 2) {
+                        if (randomNumber === 1 || randomNumber === 2) {
+                          setRandom(randomNumber);
+                        } else {
+                          setRandom(0);
+                        }
+                      } else {
+                        if (premiosAux.length === 1) {
+                          if (randomNumber === 1) {
+                            setRandom(randomNumber);
+                          } else {
+                            setRandom(0);
+                          }
+                        }
                       }
                     }
                   }
@@ -236,25 +259,51 @@ const HomeTabletPage: React.FC = () => {
 
               if (
                 randomNumber === 1 ||
-                randomNumber === 2
-                // ||
-                // randomNumber === 3
+                randomNumber === 2 ||
+                randomNumber === 3 ||
+                randomNumber === 4 ||
+                randomNumber === 5
               ) {
-                if (premiosAux.length === 3) {
+                if (premiosAux.length === 5) {
                   setRandom(randomNumber);
                 } else {
-                  if (premiosAux.length === 2) {
-                    if (randomNumber === 1 || randomNumber === 2) {
+                  if (premiosAux.length === 4) {
+                    if (
+                      randomNumber === 1 ||
+                      randomNumber === 2 ||
+                      randomNumber === 3 ||
+                      randomNumber === 4
+                    ) {
                       setRandom(randomNumber);
                     } else {
                       setRandom(0);
                     }
                   } else {
-                    if (premiosAux.length === 1) {
-                      if (randomNumber === 1) {
+                    if (premiosAux.length === 3) {
+                      if (
+                        randomNumber === 1 ||
+                        randomNumber === 2 ||
+                        randomNumber === 3
+                      ) {
                         setRandom(randomNumber);
                       } else {
                         setRandom(0);
+                      }
+                    } else {
+                      if (premiosAux.length === 2) {
+                        if (randomNumber === 1 || randomNumber === 2) {
+                          setRandom(randomNumber);
+                        } else {
+                          setRandom(0);
+                        }
+                      } else {
+                        if (premiosAux.length === 1) {
+                          if (randomNumber === 1) {
+                            setRandom(randomNumber);
+                          } else {
+                            setRandom(0);
+                          }
+                        }
                       }
                     }
                   }
@@ -267,27 +316,54 @@ const HomeTabletPage: React.FC = () => {
             if (docSnap.data().number === 50) {
               const randomNumber = Math.floor(Math.random() * 7);
               console.log(randomNumber);
+
               if (
                 randomNumber === 1 ||
-                randomNumber === 2
-                // ||
-                // randomNumber === 3
+                randomNumber === 2 ||
+                randomNumber === 3 ||
+                randomNumber === 4 ||
+                randomNumber === 5
               ) {
-                if (premiosAux.length === 3) {
+                if (premiosAux.length === 5) {
                   setRandom(randomNumber);
                 } else {
-                  if (premiosAux.length === 2) {
-                    if (randomNumber === 1 || randomNumber === 2) {
+                  if (premiosAux.length === 4) {
+                    if (
+                      randomNumber === 1 ||
+                      randomNumber === 2 ||
+                      randomNumber === 3 ||
+                      randomNumber === 4
+                    ) {
                       setRandom(randomNumber);
                     } else {
                       setRandom(0);
                     }
                   } else {
-                    if (premiosAux.length === 1) {
-                      if (randomNumber === 1) {
+                    if (premiosAux.length === 3) {
+                      if (
+                        randomNumber === 1 ||
+                        randomNumber === 2 ||
+                        randomNumber === 3
+                      ) {
                         setRandom(randomNumber);
                       } else {
                         setRandom(0);
+                      }
+                    } else {
+                      if (premiosAux.length === 2) {
+                        if (randomNumber === 1 || randomNumber === 2) {
+                          setRandom(randomNumber);
+                        } else {
+                          setRandom(0);
+                        }
+                      } else {
+                        if (premiosAux.length === 1) {
+                          if (randomNumber === 1) {
+                            setRandom(randomNumber);
+                          } else {
+                            setRandom(0);
+                          }
+                        }
                       }
                     }
                   }
@@ -298,14 +374,9 @@ const HomeTabletPage: React.FC = () => {
             }
 
             if (docSnap.data().number === 100) {
-              console.log(cantidadPremios);
               let numberWin = Math.floor(Math.random() * cantidadPremios);
               console.log("numberWin", numberWin);
-              // if (premiosAux.length === 3) {
               setRandom(numberWin + 1);
-              // } else {
-              //   setRandom(1);
-              // }
             }
           } else {
             setRandom(0);
