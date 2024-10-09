@@ -2,7 +2,7 @@ import React, { useEffect, useReducer, useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
-import uno from "../../assets/SIGAPARTICIPANDO.png";
+import uno from "../../assets/SIGAPPARTICIPANDO.png";
 import dos from "../../assets/DESCORCHADOR.png";
 import tres from "../../assets/LANYARD.png";
 import cuatro from "../../assets/SETDECOPAS.png";
